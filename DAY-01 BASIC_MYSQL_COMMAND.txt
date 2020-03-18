@@ -1,0 +1,97 @@
+**************************************************** MYSQL BASIC COMMAND *********************************************************
+*********************************************** Created By Shani Kumar Gupta *****************************************************
+<-------------------------------------------------------------------------------------------------------------------------------->
+
+1) List all databases on the MYSQL Server--->
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| student            |
+| student_details    |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.00 sec)
+
+2) To delete a Database--->
+
+mysql> DROP DATABASE student;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| student_details    |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> DROP DATABASE student_details;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (0.00 sec)
+
+3) To Create Table in particular Database--->
+
+mysql> CREATE TABLE student_details (
+    -> ID int NOT NULL,
+    -> FIRST_NAME varchar(255) NOT NULL,
+    -> LAST_NAME varchar(255) NOT NULL,
+    -> DOB date NOT NULL,
+    -> AGE int NOT NULL,
+    -> FATHER_NAME varchar(255) NOT NULL,
+    -> MOTHER_NAME varchar(255) NOT NULL,
+    -> CITY varchar(255) NOT NULL,
+    -> COURSE varchar(255) NOT NULL,
+    -> BRANCH varchar(255) NOT NULL,
+    -> MOBILE_NUM varchar(255) NOT NULL,
+    -> ADDRESS varchar(255) NOT NULL,
+    -> MARKS int NOT NULL,
+    -> PRIMARY KEY (ID)
+    -> );
+Query OK, 0 rows affected (0.09 sec)
+
+4) To see Database's field formats--->
+
+mysql> describe student_details;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| ID          | int          | NO   | PRI | NULL    |       |
+| FIRST_NAME  | varchar(255) | NO   |     | NULL    |       |
+| LAST_NAME   | varchar(255) | NO   |     | NULL    |       |
+| DOB         | date         | NO   |     | NULL    |       |
+| AGE         | int          | NO   |     | NULL    |       |
+| FATHER_NAME | varchar(255) | NO   |     | NULL    |       |
+| MOTHER_NAME | varchar(255) | NO   |     | NULL    |       |
+| CITY        | varchar(255) | NO   |     | NULL    |       |
+| COURSE      | varchar(255) | NO   |     | NULL    |       |
+| BRANCH      | varchar(255) | NO   |     | NULL    |       |
+| MOBILE_NUM  | varchar(255) | NO   |     | NULL    |       |
+| ADDRESS     | varchar(255) | NO   |     | NULL    |       |
+| MARKS       | int          | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+13 rows in set (0.01 sec)
