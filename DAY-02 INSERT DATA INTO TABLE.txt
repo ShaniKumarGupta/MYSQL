@@ -1,0 +1,49 @@
+********************************************************** MYSQL *****************************************************************
+*********************************************** Created By Shani Kumar Gupta *****************************************************
+<-------------------------------------------------------------------------------------------------------------------------------->
+
+1) Insert the Data into student_details Table--->
+
+mysql> describe student_details;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| ID          | int          | NO   | PRI | NULL    |       |
+| FIRST_NAME  | varchar(255) | NO   |     | NULL    |       |
+| LAST_NAME   | varchar(255) | NO   |     | NULL    |       |
+| DOB         | date         | NO   |     | NULL    |       |
+| AGE         | int          | NO   |     | NULL    |       |
+| FATHER_NAME | varchar(255) | NO   |     | NULL    |       |
+| MOTHER_NAME | varchar(255) | NO   |     | NULL    |       |
+| CITY        | varchar(255) | NO   |     | NULL    |       |
+| COURSE      | varchar(255) | NO   |     | NULL    |       |
+| BRANCH      | varchar(255) | NO   |     | NULL    |       |
+| MOBILE_NUM  | varchar(255) | NO   |     | NULL    |       |
+| ADDRESS     | varchar(255) | NO   |     | NULL    |       |
+| MARKS       | int          | NO   |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+13 rows in set (0.01 sec)
+
+mysql> INSERT INTO student_details (ID,FIRST_NAME,LAST_NAME,DOB,AGE,FATHER_NAME,MOTHER_NAME,CITY,COURSE,BRANCH,MOBILE_NUM,ADDRESS,MARKS) VALUES (101,"SHANI KUMAR","GUPTA",'1999-07-01',20,"SUBHASH GUPTA","MANJU DEVI","RENUKOOT","B.TECH","COMPUTER SCIENCE",'7362394375',"PP-432 HINDALCO COLONY",95);
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from student_details;
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+--------+------------------+------------+------------------------+-------+
+| ID  | FIRST_NAME  | LAST_NAME | DOB        | AGE | FATHER_NAME   | MOTHER_NAME | CITY     | COURSE | BRANCH           | MOBILE_NUM | ADDRESS                | MARKS |
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+--------+------------------+------------+------------------------+-------+
+| 101 | SHANI KUMAR | GUPTA     | 1999-07-01 |  20 | SUBHASH GUPTA | MANJU DEVI  | RENUKOOT | B.TECH | COMPUTER SCIENCE | 7362394375 | PP-432 HINDALCO COLONY |    95 |
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+--------+------------------+------------+------------------------+-------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO student_details (ID,FIRST_NAME,LAST_NAME,DOB,AGE,FATHER_NAME,MOTHER_NAME,CITY,COURSE,BRANCH,MOBILE_NUM,ADDRESS,MARKS) VALUES (102,"AMAN","KUMAR",'2000-11-09',19,"PREM KUMAR","LATA DEVI","RENUKOOT","B.PHARM","PHARMACY",'7453020943',"I-504 HINDALCO COLONY",92);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student_details;
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+---------+------------------+------------+------------------------+-------+
+| ID  | FIRST_NAME  | LAST_NAME | DOB        | AGE | FATHER_NAME   | MOTHER_NAME | CITY     | COURSE  | BRANCH           | MOBILE_NUM | ADDRESS                | MARKS |
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+---------+------------------+------------+------------------------+-------+
+| 101 | SHANI KUMAR | GUPTA     | 1999-07-01 |  20 | SUBHASH GUPTA | MANJU DEVI  | RENUKOOT | B.TECH  | COMPUTER SCIENCE | 7362394375 | PP-432 HINDALCO COLONY |    95 |
+| 102 | AMAN        | KUMAR     | 2000-11-09 |  19 | PREM KUMAR    | LATA DEVI   | RENUKOOT | B.PHARM | PHARMACY         | 7453020943 | I-504 HINDALCO COLONY  |    92 |
++-----+-------------+-----------+------------+-----+---------------+-------------+----------+---------+------------------+------------+------------------------+-------+
+2 rows in set (0.00 sec)
+
